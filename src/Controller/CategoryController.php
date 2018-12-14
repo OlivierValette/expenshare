@@ -2,19 +2,34 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Category;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
-class CategoryController extends AbstractController
+class CategoryController extends BaseController
 {
     /**
-     * @Route("/category", name="category")
+     * @Route("/category", name="category_list")
      */
-    public function index()
+    public function index(Request $request): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/CategoryController.php',
-        ]);
+        $categories = $this
+            ->getDoctrine()
+            ->getRepository(Category::class)
+            ->createQueryBuilder('c')
+            ->select('c')
+            ->getQuery()
+            ->getArrayResult();
+    
+        if ($request->isXmlHttpRequest()) {
+            // API call
+            return $this->json($categories);
+        } else {
+            // Browser
+            return $this->render('base.html.twig');
+        }
+        
     }
 }
+

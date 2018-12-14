@@ -2,19 +2,33 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\ShareGroup;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
-class ShareGroupController extends AbstractController
+class ShareGroupController extends BaseController
 {
     /**
-     * @Route("/share/group", name="share_group")
+     * @Route("/sharedgroup", name="slug_list")
      */
-    public function index()
+    public function index(Request $request): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/ShareGroupController.php',
-        ]);
+        $sharedgroup = $this
+            ->getDoctrine()
+            ->getRepository(ShareGroup::class)
+            ->createQueryBuilder('s')
+            ->select('s')
+            ->getQuery()
+            ->getArrayResult();
+        
+        if ($request->isXmlHttpRequest()) {
+            // API call
+            return $this->json($sharedgroup);
+        } else {
+            // Browser
+            return $this->render('base.html.twig');
+        }
+        
     }
 }

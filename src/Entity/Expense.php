@@ -126,6 +126,10 @@ class Expense
 
         return $this;
     }
-
-
+    
+    public function __toString()
+    {
+        return $this->getTitle().' ('.$this->getAmount().'€)';
+    }
+    
 }

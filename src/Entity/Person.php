@@ -85,6 +85,15 @@ class Person
 
         return $this;
     }
-
-
+    
+    public function getFullname()
+    {
+        return $this->getFirstname().$this->getLastname();
+    }
+    
+    public function __toString()
+    {
+        return $this->getFullname();
+    }
+    
 }

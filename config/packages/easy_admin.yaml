@@ -1,0 +1,29 @@
+easy_admin:
+    # general parameters
+    site_name: 'Admin Expenshare'
+    design:
+        brand_color: '#ff5f49'
+        menu:
+            - { label: 'Catégorie', entity: Category }
+            - { label: 'Personnes', entity: Person }
+            - { label: 'Dépenses', entity: Expense }
+            - { label: 'Dettes', entity: Debt }
+            - { label: 'Groupes', entity: ShareGroup }
+
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
+    list:
+        max_results: 10
+    show:
+        max_results: 10
+
+    # List the entity class name you want to manage
+    entities:
+        # List the entity class name you want to manage
+        - App\Entity\Person
+        - App\Entity\Category
+        - App\Entity\Expense
+        - App\Entity\Debt
+        - App\Entity\ShareGroup

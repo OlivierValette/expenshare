@@ -1,0 +1,19 @@
+GET http://127.0.0.1/php/expenshare/public/default
+Accept: */*
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+<> 2018-12-14T010839.200.json
+<> 2018-12-14T010552.200.json
+<> 2018-12-14T010426.200.json
+<> 2018-12-14T010156.200.json
+<> 2018-12-14T010145.200.json
+<> 2018-12-14T125923.200.json
+<> 2018-12-14T125807.500.html
+<> 2018-12-14T125015.200.json
+<> 2018-12-14T124725.200.json
+<> 2018-12-14T115738.404.html
+<> 2018-12-14T114350.500.html
+
+###
+

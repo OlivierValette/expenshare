@@ -1,4 +1,4 @@
-GET http://127.0.0.1/php/expenshare/public/default
+GET http://127.0.0.1/php/expenshare/public/person/voyage-a-venise-2018
 Accept: */*
 Cache-Control: no-cache
 X-Requested-With: XMLHttpRequest

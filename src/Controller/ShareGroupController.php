@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ShareGroupController extends BaseController
 {
     /**
-     * @Route("/sharedgroup", name="slug_list")
+     * @Route("/sharegroup", name="slug_list")
      */
     public function index(Request $request): Response
     {

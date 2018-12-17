@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Expense;
 use App\Entity\Person;
 use App\Entity\ShareGroup;
 use Symfony\Component\Routing\Annotation\Route;
@@ -38,4 +39,27 @@ class PersonController extends BaseController
         }
         
     }
+
+
+    /**
+     * @Route("/person/show/{id}", name="person_show")
+     */
+    public function show(Person $id, Request $request): Response
+    {
+        $persons = $this
+            ->getDoctrine()
+            ->getRepository(Expense::class)
+            ->personExpense($id);
+        
+        if ($request->isXmlHttpRequest()) {
+            // API call
+            return $this->json($persons);
+        } else {
+            // Browser
+            return $this->render('base.html.twig');
+        }
+        
+    }
+    
 }
+

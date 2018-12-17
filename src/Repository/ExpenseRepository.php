@@ -31,4 +31,5 @@ class ExpenseRepository extends ServiceEntityRepository
         
         return $qb->getQuery()->getArrayResult();
     }
+    
 }

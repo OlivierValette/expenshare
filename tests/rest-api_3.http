@@ -1,0 +1,19 @@
+GET http://127.0.0.1/php/expenshare/public/person/show/3
+Accept: */*
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+<> 2018-12-17T124753.200.json
+<> 2018-12-17T110349.200.json
+<> 2018-12-17T110331.500.html
+<> 2018-12-17T105835.200.json
+<> 2018-12-17T105737.500.html
+<> 2018-12-17T103614.500.html
+<> 2018-12-17T102846.500.html
+<> 2018-12-17T102350.500.html
+<> 2018-12-17T102310.500.html
+<> 2018-12-17T102232.500.html
+<> 2018-12-17T093941.500.html
+
+###
+

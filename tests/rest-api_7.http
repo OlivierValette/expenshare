@@ -1,0 +1,16 @@
+POST http://127.0.0.1/php/expenshare/public/person
+Accept: application/json
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+{"firstname": "Test",
+"lastname": "Test",
+"slug": "weekend-a-saint-malo-entre-amis"}
+
+<> 2018-12-18T044108.200.json
+<> 2018-12-18T043928.500.html
+<> 2018-12-18T043200.500.html
+<> 2018-12-18T042938.404.html
+
+###
+

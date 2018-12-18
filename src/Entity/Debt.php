@@ -36,7 +36,7 @@ class Debt
     private $paid = '0';
 
     /**
-     * @var \Person
+     * @var Person
      *
      * @ORM\ManyToOne(targetEntity="Person")
      * @ORM\JoinColumns({

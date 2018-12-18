@@ -43,7 +43,7 @@ class Expense
     private $createdAt;
 
     /**
-     * @var \Category
+     * @var Category
      *
      * @ORM\ManyToOne(targetEntity="Category")
      * @ORM\JoinColumns({
@@ -53,7 +53,7 @@ class Expense
     private $category;
 
     /**
-     * @var \Person
+     * @var Person
      *
      * @ORM\ManyToOne(targetEntity="Person")
      * @ORM\JoinColumns({

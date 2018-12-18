@@ -9,6 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
+
 class PersonController extends BaseController
 {
     /**
@@ -30,14 +31,8 @@ class PersonController extends BaseController
             ->getQuery()
             ->getArrayResult();
         
-        if ($request->isXmlHttpRequest()) {
-            // API call
-            return $this->json($persons);
-        } else {
-            // Browser
-            return $this->render('base.html.twig');
-        }
-        
+        return $this->json($persons);
+
     }
 
 

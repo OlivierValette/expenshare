@@ -36,7 +36,7 @@ class Person
     private $lastname;
 
     /**
-     * @var \ShareGroup
+     * @var ShareGroup
      *
      * @ORM\ManyToOne(targetEntity="ShareGroup")
      * @ORM\JoinColumns({

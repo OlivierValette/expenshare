@@ -1,0 +1,16 @@
+GET http://127.0.0.1/php/expenshare/public/sharegroup
+: */*
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+<> 2018-12-17T040808.200.json
+<> 2018-12-17T035958.200.json
+<> 2018-12-17T035921.500.html
+<> 2018-12-17T035842.500.html
+<> 2018-12-17T035825.404.html
+<> 2018-12-17T034628.200.json
+<> 2018-12-17T033818.404.html
+<> 2018-12-17T025623.404.html
+
+###
+

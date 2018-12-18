@@ -1,0 +1,21 @@
+POST http://127.0.0.1/php/expenshare/public/sharegroup/
+Accept: application/json
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+{"slug": "test"}
+
+<> 2018-12-18T024352.500.html
+<> 2018-12-18T024219.500.html
+<> 2018-12-18T024111.500.html
+<> 2018-12-18T024016.200.json
+<> 2018-12-18T014306.200.json
+<> 2018-12-18T014205.500.html
+<> 2018-12-18T123346.500.html
+<> 2018-12-18T114002.500.html
+<> 2018-12-18T113852.500.html
+<> 2018-12-18T113450.500.html
+<> 2018-12-18T112930.500.html
+
+###
+

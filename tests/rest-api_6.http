@@ -1,0 +1,9 @@
+GET http://127.0.0.1/php/expenshare/public/sharegroup/weekend-a-saint-malo-entre-amis
+Accept: */*
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+<> 2018-12-18T024530.200.json
+
+###
+

@@ -15,9 +15,9 @@ use Symfony\Component\HttpFoundation\Request;
 class ShareGroupController extends BaseController
 {
     /**
-     * @Route("/", name="slug_list")
+     * @Route("/", name="slug_list", methods="GET")
      */
-    public function index(Request $request): Response
+    public function list(Request $request): Response
     {
         $sharedgroup = $this
             ->getDoctrine()
@@ -34,7 +34,7 @@ class ShareGroupController extends BaseController
     /**
      * @Route("/{slug}", name="sharegroup_get", methods="GET")
      */
-    public function show(ShareGroup $shareGroup)
+    public function index(ShareGroup $shareGroup)
     {
         return $this->json($this->serialize($shareGroup));
     }

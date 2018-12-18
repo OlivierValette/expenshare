@@ -24,6 +24,7 @@ class ExpenseController extends BaseController
             ->select('e', 'p', 'c')
             ->innerJoin('e.person', 'p')
             ->innerJoin('e.category', 'c')
+            
             ->where($expenses->expr()->eq('p.id', ':id'));
     
         $expenses = $expenses

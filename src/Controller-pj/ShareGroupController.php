@@ -22,25 +22,25 @@ class ShareGroupController extends BaseController
         return $this->json($this->serialize($shareGroup));
     }
 
-    /**
-     * @Route("/", name="sharegroup_new", methods="POST")
-     */
-    public function new(Request $request)
+/**
+ * @Route("/", name="sharegroup_new", methods="POST")
+ */
+public function new(Request $request)
     {
         $data = $request->getContent();
-
+    
         $jsonData = json_decode($data, true);
-
+    
         $em = $this->getDoctrine()->getManager();
-
+    
         $sharegroup = new ShareGroup();
         $sharegroup->setSlug($jsonData["slug"]);
         $sharegroup->setCreatedAt(new \DateTime());
         $sharegroup->setClosed(false);
-
+    
         $em->persist($sharegroup);
         $em->flush();
-
+    
         return $this->json($this->serialize($sharegroup));
     }
 

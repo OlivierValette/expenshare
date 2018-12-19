@@ -33,14 +33,8 @@ class ExpenseController extends BaseController
             ->setParameter(':id', $id->getId())
             ->getQuery()
             ->getArrayResult();
-        
-        if ($request->isXmlHttpRequest()) {
-            // API call
-            return $this->json($expenses);
-        } else {
-            // Browser
-            return $this->render('base.html.twig');
-        }
+    
+        return $this->json($this->serialize($expenses));
         
     }
     
@@ -69,6 +63,18 @@ class ExpenseController extends BaseController
         $expense->setPerson($person);
         
         $em->persist($expense);
+        $em->flush();
+        
+        return $this->json($this->serialize($expense));
+    }
+    
+    /**
+     * @Route("/expense/delete/{id}", name="expense_delete", methods="DELETE")
+     */
+    public function delete(Expense $expense)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($expense);
         $em->flush();
         
         return $this->json($this->serialize($expense));

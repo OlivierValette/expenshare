@@ -30,8 +30,8 @@ class PersonController extends BaseController
             ->setParameter(':group', $group->getSlug())
             ->getQuery()
             ->getArrayResult();
-        
-        return $this->json($persons);
+    
+        return $this->json($this->serialize($persons));
 
     }
 
@@ -45,8 +45,8 @@ class PersonController extends BaseController
             ->getDoctrine()
             ->getRepository(Expense::class)
             ->personExpense($id);
-        
-        return $this->json($persons);
+    
+        return $this->json($this->serialize($persons));
         
     }
     
@@ -85,7 +85,7 @@ class PersonController extends BaseController
         $em->remove($person);
         $em->flush();
 
-         return $this->json($this->serialize($person));
+        return $this->json($this->serialize($person));
     }
 
 }

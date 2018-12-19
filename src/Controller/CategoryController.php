@@ -22,7 +22,7 @@ class CategoryController extends BaseController
             ->getQuery()
             ->getArrayResult();
     
-            return $this->json($categories);
+            return $this->json($this->serialize($categories));
         
     }
 }

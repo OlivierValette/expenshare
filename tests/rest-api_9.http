@@ -1,0 +1,14 @@
+POST http://127.0.0.1/php/expenshare/public/expense
+Accept: application/json
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+{"title": "Taxi gare hôtel", "amount": "50", "categoryId": "1", "personId": "6"}
+
+<> 2018-12-19T094353.200.json
+<> 2018-12-19T094315.404.html
+<> 2018-12-19T093910.404.html
+<> 2018-12-19T093619.404.html
+
+###
+

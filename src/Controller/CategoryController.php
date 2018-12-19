@@ -22,13 +22,7 @@ class CategoryController extends BaseController
             ->getQuery()
             ->getArrayResult();
     
-        if ($request->isXmlHttpRequest()) {
-            // API call
             return $this->json($categories);
-        } else {
-            // Browser
-            return $this->render('base.html.twig');
-        }
         
     }
 }

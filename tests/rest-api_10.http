@@ -1,0 +1,17 @@
+DELETE http://127.0.0.1/php/expenshare/public/person/delete/9
+Accept: application/json
+Cache-Control: no-cache
+X-Requested-With: XMLHttpRequest
+
+<> 2018-12-19T012914.200.json
+<> 2018-12-19T012119.200.json
+<> 2018-12-19T011841.200.json
+<> 2018-12-19T011719.500.html
+<> 2018-12-19T011529.500.html
+<> 2018-12-19T011409.404.html
+<> 2018-12-19T010604.404.html
+<> 2018-12-19T125856.404.html
+
+
+###
+

@@ -46,13 +46,7 @@ class PersonController extends BaseController
             ->getRepository(Expense::class)
             ->personExpense($id);
         
-        if ($request->isXmlHttpRequest()) {
-            // API call
-            return $this->json($persons);
-        } else {
-            // Browser
-            return $this->render('base.html.twig');
-        }
+        return $this->json($persons);
         
     }
     
@@ -81,5 +75,18 @@ class PersonController extends BaseController
         
         return $this->json($this->serialize($person));
     }
+    
+    /**
+     * @Route("/person/delete/{id}", name="person_delete", methods="DELETE")
+     */
+    public function delete(Request $request, Person $person)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($person);
+        $em->flush();
+
+         return $this->json($this->serialize($person));
+    }
+
 }
 

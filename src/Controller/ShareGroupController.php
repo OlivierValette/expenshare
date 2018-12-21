@@ -60,5 +60,19 @@ class ShareGroupController extends BaseController
     
         return $this->json($this->serialize($sharegroup));
     }
+    
+    /**
+     * @Route("/close/{slug}", name="sharegroup_close", methods="PUT")
+     */
+    public function close(ShareGroup $sharegroup)
+    {
+        $sharegroup->setClosed(true);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($sharegroup);
+        $em->flush();
+    
+        return $this->json($this->serialize($sharegroup));
+        
+    }
 
 }

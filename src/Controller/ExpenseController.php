@@ -13,7 +13,21 @@ use Symfony\Component\HttpFoundation\Request;
 class ExpenseController extends BaseController
 {
     /**
-     * @Route("/expense/show/{id}", name="expense_list")
+     * @Route("/expense/list", name="expense_list")
+     */
+    public function index(Request $request): Response
+    {
+        $expenses = $this
+            ->getDoctrine()
+            ->getRepository(Expense::class)
+            ->findAll();
+        
+        return $this->json($this->serialize($expenses));
+        
+    }
+    
+    /**
+     * @Route("/expense/show/{id}", name="person_exp_list")
      */
     public function show(Person $id, Request $request): Response
     {
